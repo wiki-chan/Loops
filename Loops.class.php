@@ -1,5 +1,8 @@
 <?php
 
+// Include the settings file:
+require_once dirname( __FILE__ ) . '/Loops_Settings.php';
+
 /**
  * Class representing extension 'Loops', containing all parser functions and other
  * extension logic stuff.
