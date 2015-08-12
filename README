@@ -1,0 +1,27 @@
+== About ==
+
+The 'Loops' extension Enhances the parser with parser functions to perform loops.
+It is not compatible with MediaWiki versions below 1.12.
+
+* Website: https://github.com/wiki-chan/Loops
+* Authors: David M. Sledge, Daniel Werner < danweetz@web.de >, Fenet-
+* License: GNU GPL v2 or higher
+
+This extension is forked from [https://www.mediawiki.org/wiki/Extension:Loops].
+
+== Installation ==
+
+Once you have downloaded the code, place the 'Loops' directory within your
+MediaWiki 'extensions' directory. Then add the following code to your
+LocalSettings.php (see https://www.mediawiki.org/wiki/Manual:LocalSettings.php) file:
+
+ # Loops
+ wfLoadExtension( "Loops" );
+
+You will also want to install the Variables extension to enable the functions
+'loop', 'forargs' and 'fornumargs'.
+
+== Contributing ==
+
+If you have bug reports or feature requests, please add them to the 'Loops'
+Talk page http://www.mediawiki.org/w/index.php?title=Extension_talk:Loops

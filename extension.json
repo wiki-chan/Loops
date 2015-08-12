@@ -1,0 +1,36 @@
+{
+	"name": "Loops",
+	"version": "0.5.0",
+	"author": [
+		"David M. Sledge",
+		"[http://www.mediawiki.org/wiki/User:Danwe Daniel Werner]",
+		"페네트-"
+	],
+	"url": "https://github.com/wiki-chan/Loops",
+	"descriptionmsg": "loops-desc",
+	"license-name": "GPL-2.0+",
+	"type": "parserhook",
+	"MessagesDirs": {
+		"Loops": [
+			"i18n"
+		]
+	},
+	"ExtensionMessagesFiles": {
+		"Loops": "Loops.i18n.php",
+		"LoopsMagic": "Loops.i18n.magic.php"
+	},
+	"AutoloadClasses": {
+		"ExtLoops": "Loops.class.php"
+	},
+	"Hooks": {
+		"ParserFirstCallInit": [
+			"ExtLoops::init"
+		],
+		"ParserLimitReport": [
+			"ExtLoops::onParserLimitReport"
+		],
+		"ParserClearState": [
+			"ExtLoops::onParserClearState"
+		]
+	}
+}
