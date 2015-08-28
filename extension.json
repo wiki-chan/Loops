@@ -32,5 +32,14 @@
 		"ParserClearState": [
 			"ExtLoops::onParserClearState"
 		]
+	},
+	"config": {
+		"LoopsEnabledFunctions": [
+			"while",
+			"dowhile",
+			"loop",
+			"forargs",
+			"fornumargs"
+		]
 	}
 }

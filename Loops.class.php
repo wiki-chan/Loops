@@ -30,9 +30,9 @@ class ExtLoops {
 			 * If Variables extension not defined, we can't use certain functions.
 			 * Make sure they are disabled:
 			 */
-			global $egLoopsEnabledFunctions;
+			global $wgLoopsEnabledFunctions;
 			$disabledFunctions = array( 'loop', 'forargs', 'fornumargs' );
-			$egLoopsEnabledFunctions = array_diff( $egLoopsEnabledFunctions, $disabledFunctions );
+			$wgLoopsEnabledFunctions = array_diff( $wgLoopsEnabledFunctions, $disabledFunctions );
 		}
 
 		/*
@@ -51,10 +51,12 @@ class ExtLoops {
 		return true;
 	}
 	private static function initFunction( Parser &$parser, $name ) {
-		global $egLoopsEnabledFunctions;
+		global $wgLoopsEnabledFunctions;
+
+		if ($wgLoopsEnabledFunctions == null) $wgLoopsEnabledFunctions = array();
 
 		// don't register parser function if disabled by configuration:
-		if( ! in_array( $name, $egLoopsEnabledFunctions ) ) {
+		if( ! in_array( $name, $wgLoopsEnabledFunctions ) ) {
 			return;
 		}
 

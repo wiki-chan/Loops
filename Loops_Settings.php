@@ -28,4 +28,4 @@
  * @since 0.4
  * @var array
  */
-$egLoopsEnabledFunctions = array( 'while', 'dowhile', 'loop', 'forargs', 'fornumargs' );
+$wgLoopsEnabledFunctions = array( 'while', 'dowhile', 'loop', 'forargs', 'fornumargs' );
